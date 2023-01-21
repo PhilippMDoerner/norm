@@ -12,7 +12,7 @@ skipDirs      = @["tests", "htmldocs"]
 
 requires "nim >= 1.4.0"
 when NimMajor >= 1 and NimMinor >= 9:
-  requires "https://github.com/PhilippMDoerner/ndb.nim#c98664c"
+  requires "https://github.com/PhilippMDoerner/ndb.nim#eb7ef4c"
 else:
   requires "ndb >= 0.19.9"
 
