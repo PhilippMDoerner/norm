@@ -10,8 +10,11 @@ skipDirs      = @["tests", "htmldocs"]
 
 # Dependencies
 
-requires "nim >= 1.4.0", "ndb >= 0.19.9"
-
+requires "nim >= 1.4.0"
+when NimMajor >= 1 and NimMinor >= 9:
+  requires "https://github.com/PhilippMDoerner/ndb.nim#c98664c"
+else:
+  requires "ndb >= 0.19.9"
 
 task test, "Run tests":
   exec "testament all"
