@@ -1,0 +1,34 @@
+RollbackError	norm/postgres.html#RollbackError	postgres: RollbackError	
+NotFoundError	norm/postgres.html#NotFoundError	postgres: NotFoundError	
+dbHostEnv	norm/postgres.html#dbHostEnv	postgres: dbHostEnv	
+dbUserEnv	norm/postgres.html#dbUserEnv	postgres: dbUserEnv	
+dbPassEnv	norm/postgres.html#dbPassEnv	postgres: dbPassEnv	
+dbNameEnv	norm/postgres.html#dbNameEnv	postgres: dbNameEnv	
+getDb	norm/postgres.html#getDb	postgres: getDb(): DbConn	
+withDb	norm/postgres.html#withDb.t,untyped	postgres: withDb(body: untyped): untyped	
+dropDb	norm/postgres.html#dropDb	postgres: dropDb()	
+createTables	norm/postgres.html#createTables,,T	postgres: createTables[T: Model](dbConn; obj: T)	
+insert	norm/postgres.html#insert,,T	postgres: insert[T: Model](dbConn; obj: var T; force = false; conflictPolicy = cpRaise)	
+insert	norm/postgres.html#insert,,openArray[T]	postgres: insert[T: Model](dbConn; objs: var openArray[T]; force = false)	
+select	norm/postgres.html#select,,T,string,varargs[DbValue,dbValue]	postgres: select[T: Model](dbConn; obj: var T; cond: string;\n                 params: varargs[DbValue, dbValue])	
+select	norm/postgres.html#select,,seq[T],string,varargs[DbValue,dbValue]	postgres: select[T: Model](dbConn; objs: var seq[T]; cond: string;\n                 params: varargs[DbValue, dbValue])	
+selectAll	norm/postgres.html#selectAll,,seq[T]	postgres: selectAll[T: Model](dbConn; objs: var seq[T])	
+rawSelect	norm/postgres.html#rawSelect,,string,T,varargs[DbValue,dbValue]	postgres: rawSelect[T: ref object](dbConn; qry: string; obj: var T;\n                         params: varargs[DbValue, dbValue])	
+rawSelect	norm/postgres.html#rawSelect,,string,seq[T],varargs[DbValue,dbValue]	postgres: rawSelect[T: ref object](dbConn; qry: string; objs: var seq[T];\n                         params: varargs[DbValue, dbValue])	
+count	norm/postgres.html#count,,typedesc[Model],string,string,varargs[DbValue,dbValue]	postgres: count(dbConn; T: typedesc[Model]; col = &quot;*&quot;; dist = false; cond = &quot;TRUE&quot;;\n      params: varargs[DbValue, dbValue]): int64	
+sum	norm/postgres.html#sum,,typedesc[Model],string,string,varargs[DbValue,dbValue]	postgres: sum(dbConn; T: typedesc[Model]; col: string; dist = false; cond = &quot;TRUE&quot;;\n    params: varargs[DbValue, dbValue]): float	
+exists	norm/postgres.html#exists,,typedesc[Model],string,varargs[DbValue,dbValue]	postgres: exists(dbConn; T: typedesc[Model]; cond = &quot;TRUE&quot;;\n       params: varargs[DbValue, dbValue]): bool	
+update	norm/postgres.html#update,,T	postgres: update[T: Model](dbConn; obj: var T)	
+update	norm/postgres.html#update,,openArray[T]	postgres: update[T: Model](dbConn; objs: var openArray[T])	
+delete	norm/postgres.html#delete,,T	postgres: delete[T: Model](dbConn; obj: var T)	
+delete	norm/postgres.html#delete,,openArray[T]	postgres: delete[T: Model](dbConn; objs: var openArray[T])	
+rollback	norm/postgres.html#rollback	postgres: rollback()	
+transaction	norm/postgres.html#transaction.t,,untyped	postgres: transaction(dbConn; body: untyped): untyped	
+selectOneToMany	norm/postgres.html#selectOneToMany,,O,seq[M],staticstring	postgres: selectOneToMany[O: Model; M: Model](dbConn; oneEntry: O;\n                                    relatedEntries: var seq[M];\n                                    foreignKeyFieldName: static string)	
+selectOneToMany	norm/postgres.html#selectOneToMany,,O,seq[M]	postgres: selectOneToMany[O: Model; M: Model](dbConn; oneEntry: O;\n                                    relatedEntries: var seq[M])	
+selectOneToMany	norm/postgres.html#selectOneToMany,,seq[O],Table[int64,seq[M]],staticstring	postgres: selectOneToMany[O: Model; M: Model](dbConn; oneEntries: seq[O];\n                                    relatedEntries: var Table[int64, seq[M]];\n                                    foreignKeyFieldName: static string)	
+selectOneToMany	norm/postgres.html#selectOneToMany,,seq[O],seq[M]	postgres: selectOneToMany[O: Model; M: Model](dbConn; oneEntries: seq[O];\n                                    relatedEntries: var seq[M])	
+selectManyToMany	norm/postgres.html#selectManyToMany,,M1,seq[J],seq[M2],staticstring,staticstring	postgres: selectManyToMany[M1: Model; J: Model; M2: Model](dbConn; queryStartEntry: M1;\n    joinModelEntries: var seq[J]; queryEndEntries: var seq[M2];\n    fkColumnFromJoinToManyStart: static string;\n    fkColumnFromJoinToManyEnd: static string)	
+selectManyToMany	norm/postgres.html#selectManyToMany,,M1,seq[J],seq[M2]	postgres: selectManyToMany[M1: Model; J: Model; M2: Model](dbConn; queryStartEntry: M1;\n    joinModelEntries: var seq[J]; queryEndEntries: var seq[M2])	
+selectManyToMany	norm/postgres.html#selectManyToMany,,seq[M1],seq[J],Table[int64,seq[M2]],staticstring,staticstring	postgres: selectManyToMany[M1: Model; J: Model; M2: Model](dbConn;\n    queryStartEntries: seq[M1]; joinModelEntries: var seq[J];\n    queryEndEntries: var Table[int64, seq[M2]];\n    fkColumnFromJoinToManyStart: static string;\n    fkColumnFromJoinToManyEnd: static string)	
+selectManyToMany	norm/postgres.html#selectManyToMany,,seq[M1],seq[J],Table[int64,seq[M2]]	postgres: selectManyToMany[M1: Model; J: Model; M2: Model](dbConn;\n    queryStartEntries: seq[M1]; joinModelEntries: var seq[J];\n    queryEndEntries: var Table[int64, seq[M2]])	
